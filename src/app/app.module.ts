@@ -12,6 +12,10 @@ import { ActorListadoComponent } from './componentes/actor-listado/actor-listado
 import { PeliculasListadoComponent } from './componentes/peliculas-listado/peliculas-listado.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
