@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
 
 const routes: Routes = [
-  {path: 'busqueda', component: BusquedaComponent}
+  {path: '', component: BusquedaComponent}
 ];
 
 @NgModule({
