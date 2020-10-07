@@ -33,11 +33,6 @@ export class PeliculasService {
         return data;
       });
     }));
-    // return this.afs.collection('peliculas', ref => ref.where('id', '==', idPelicula)).get().subscribe(x =>{
-    //   x.forEach(doc =>{
-    //     console.log(doc.data());
-    //   })
-    // });;
   }
 
 
