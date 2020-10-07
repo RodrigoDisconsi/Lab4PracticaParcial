@@ -25,14 +25,15 @@ export class PeliculasService {
   }
 
   getOnePelicula(idPelicula:string){
-    return this.afs.collection('peliculas', ref => ref.where('id', '==', idPelicula)).snapshotChanges()
-    .pipe(map(changes => {
-      return changes.map(action => {
-        const data = action.payload.doc.data() as IPelicula;
-        data.id = action.payload.doc.id;
-        return data;
-      });
-    }));
+    // return this.afs.collection('peliculas', ref => ref.where('id', '==', idPelicula)).snapshotChanges()
+    // .pipe(map(changes => {
+    //   return changes.map(action => {
+    //     const data = action.payload.doc.data() as IPelicula;
+    //     data.id = action.payload.doc.id;
+    //     return data;
+    //   });
+    // }));
+    return this.peliculasColeccion.doc(idPelicula).get();
   }
 
 

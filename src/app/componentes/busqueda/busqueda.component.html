@@ -33,9 +33,7 @@
   
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-3">Listado de Películas</h1>
-          <p>Insertar componente tablaPelículas</p>
-          <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+          <app-tabla-peliculas [listaPeliculas]="peliculas" (peliculaSeleccionada)="peliculaSelec($event)"></app-tabla-peliculas>
         </div>
       </div>
   

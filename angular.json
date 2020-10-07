@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "PracticaParcial"
+  "defaultProject": "PracticaParcial",
+  "cli": {
+    "analytics": false
+  }
 }
